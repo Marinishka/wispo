@@ -23,7 +23,7 @@ const Comparison = ({data}) => {
     <div className="comparison__container">
       <div className="comparison__header">
         <div className="comparison__filter">
-          <div>
+          <div className="comparison__categories">
             <div className="comparison__title">Для категорий</div>
             <Prompt plainText={`Подсказка`}/>
           </div>

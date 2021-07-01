@@ -37,23 +37,25 @@ const getSubcharacteristics = (title, dataWithObjects) => {
   </div>);
 };
 
-const getProductCharacteristicValues = (title, values) => {
+const getProductCharacteristicValues = (characteristic, values) => {
   let productCharacteristicValues = [];
 
   const dataWithObjects = values.filter((i) => i.constructor.name === `Object`);
   if (dataWithObjects.length > 0) {
-    productCharacteristicValues = getSubcharacteristics(title, dataWithObjects);
+    productCharacteristicValues = <div className={`characteristics__row characteristics__row--main characteristics__row--${characteristic}`}>
+      <div className="characteristics__title characteristics__title--main characteristics__title--with-subcharacteristics">{Characteristics[characteristic].title}</div>{getSubcharacteristics(characteristic, dataWithObjects)}
+    </div>;
   } else {
-    productCharacteristicValues = getValuesFromArray(title, values);
+    productCharacteristicValues = <div className={`characteristics__row characteristics__row--main characteristics__row--${characteristic}`}>
+      <div className="characteristics__title characteristics__title--main characteristics__title--without-subcharacteristics">{Characteristics[characteristic].title}</div>
+      {getValuesFromArray(characteristic, values)}
+    </div>;
   }
   return productCharacteristicValues;
 };
 
 const CharacteristicRow = ({data, characteristic}) => {
-  return <div className={`characteristics__row characteristics__row--main characteristics__row--${characteristic}`}>
-    <div className="characteristics__title characteristics__title--main">{Characteristics[characteristic].title}</div>
-    {getProductCharacteristicValues(characteristic, data)}
-  </div>;
+  return getProductCharacteristicValues(characteristic, data);
 };
 
 CharacteristicRow.propTypes = {
