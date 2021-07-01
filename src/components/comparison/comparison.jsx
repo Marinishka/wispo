@@ -1,14 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ProductHeader from '../product-header/product-header';
 import CharacteristicsTable from '../characteristics-table/characteristics-table';
 import PropTypes from 'prop-types';
 import Prompt from '../prompt/prompt';
 
 const Comparison = ({data}) => {
+  const [filterProducts, setFilterProducts] = useState(`all-characteristics`);
   const {category, items} = data;
 
   const getProductHeaders = (products, categoryItem) => {
     return products.map((product) => <ProductHeader key={product.name} item={product} categoryItem={categoryItem}/>);
+  };
+
+  const onFilterBtnsClick = (evt) => {
+    setFilterProducts(evt.target.dataset.filter);
   };
 
   return <div className="comparison">
@@ -22,9 +27,9 @@ const Comparison = ({data}) => {
           <select className="comparison__select">
             <option>{category}</option>
           </select>
-          <div className="comparison__btns">
-            <button className="comparison__btn comparison__btn--checked" data-filter-show="all-characteristics" aria-label="Показать все характеристики">Все характеристики</button>
-            <button className="comparison__btn" data-filter-show="differences" aria-label="Показать только отличающиеся характеристики">Показать только различия</button>
+          <div className="comparison__btns" onClick={onFilterBtnsClick}>
+            <button className={`comparison__btn ${filterProducts === `all-characteristics` ? `comparison__btn--checked` : ``}`} data-filter="all-characteristics" aria-label="Показать все характеристики">Все характеристики</button>
+            <button className={`comparison__btn ${filterProducts === `differences` ? `comparison__btn--checked` : ``}`} data-filter="differences" aria-label="Показать только отличающиеся характеристики">Показать только различия</button>
           </div>
         </div>
         <div className="comparison__products-headers">
