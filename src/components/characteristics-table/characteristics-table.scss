@@ -1,0 +1,150 @@
+.characteristics__title-bottom {
+  width: 1100px;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 33px;
+  margin-left: auto;
+
+  font-size: 20px;
+  font-family: "Montserrat-Bold", "Arial", sans-serif;
+  text-align: center;
+}
+
+.characteristics__row--main:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.characteristics__row--main.characteristics__row--bonuses {
+  margin-bottom: 33px;
+}
+
+.characteristics__row--main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.characteristics__row--subcharacteristic {
+  display: flex;
+  width: 100%;
+  padding-top: 30px;
+}
+
+.characteristics__title {
+  @extend .cell--title;
+}
+
+.characteristics__title--main {
+  font-size: 20px;
+}
+
+.characteristics__title--subcharacteristic {
+  padding-top: 5px;
+
+  font-size: 14px;
+  color: $color-text-halfhidden;
+}
+
+.characteristics__cell {
+  @extend .cell--content;
+}
+
+
+.characteristics__value {
+  padding-left: 3px;
+
+  font-size: 14px;
+}
+
+.characteristics__value--bonuses {
+  display: inline-block;
+  margin-left: 5px;
+  padding: 3px 8px 4px 15px;
+
+  font-size: 12px;
+  font-family: "Montserrat-Bold", "Arial", sans-serif;
+
+  border: 2px solid #f6f6f6;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.02);
+}
+
+.characteristics__btns {
+  text-align: center;
+}
+
+.characteristics__btn {
+  padding-top: 15px;
+  padding-right: 40px;
+  padding-bottom: 15px;
+
+  border-radius: 10px;
+}
+
+.characteristics__btn:not(:last-child) {
+  margin-right: 28px;
+}
+
+.characteristics__btn--clear {
+  padding-left: 40px;
+
+  color: $main-color;
+
+  background-color: $bg-color-main;
+  border: none;
+}
+
+.characteristics__btn--clear:hover,
+.characteristics__btn--clear:active {
+  background-color: darken($color: $bg-color-main, $amount: 20%);
+}
+
+.characteristics__btn--clear:active {
+  background-color: darken($color: $bg-color-main, $amount: 10%);
+}
+
+.characteristics__btn--back {
+  position: relative;
+
+  padding-left: 55px;
+
+  color: white;
+  text-decoration: none;
+
+  background-color: $main-color;
+}
+
+.characteristics__btn--back:hover,
+.characteristics__btn--back:active {
+  background-color: lighten($color: $main-color, $amount: 30%);
+}
+
+.characteristics__btn--back:active {
+  background-color: lighten($color: $main-color, $amount: 20%);
+}
+
+.characteristics__btn--back::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 44px;
+
+  display: block;
+  width: 2px;
+  height: 10px;
+
+  background-color: white;
+  transform: rotate(45deg);
+}
+
+.characteristics__btn--back::before {
+  content: "";
+  position: absolute;
+  top: 23px;
+  left: 44px;
+
+  display: block;
+  width: 2px;
+  height: 10px;
+
+  background-color: white;
+  transform: rotate(-45deg);
+}

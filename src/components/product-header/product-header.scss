@@ -1,0 +1,152 @@
+.product-header {
+  position: relative;
+
+  display: flex;
+  padding-top: 29px;
+  padding-right: 20px;
+
+@extend .cell--content;
+}
+
+.product-header__img {
+  margin-right: 29px;
+}
+
+.product-header__category {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  font-family: "Montserrat-Regular", "Arial", sans-serif;
+  color: $color-text-halfhidden;
+}
+
+.product-header__name {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 23px;
+
+  color: $main-color;
+  text-decoration: none;
+}
+
+.product-header__name:hover,
+.product-header__name:focus {
+  color: lighten($color: $main-color, $amount: 30%);
+}
+
+.product-header__name:active {
+  color: lighten($color: $main-color, $amount: 20%);
+}
+
+.product-header__prices {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.product-header__price--new {
+  margin-right: 10px;
+
+  font-size: 20px;
+  font-family: "Montserrat-Bold", "Arial", sans-serif;
+}
+
+.product-header__price--old {
+  position: relative;
+
+  font-size: 14px;
+  vertical-align: middle;
+  color: $color-text-halfhidden;
+}
+
+.product-header__price--old::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  display: block;
+  width: 100%;
+  height: 1px;
+
+  background-color: $color-text-halfhidden;
+}
+
+.product-header__btns {
+  display: flex;
+}
+
+.product-header__in-basket {
+  display: inline-block;
+  margin-right: 21px;
+  padding: 8px 18px;
+
+  font-size: 14px;
+  font-family: "Montserrat-Bold", "Arial", sans-serif;
+  color: white;
+  text-decoration: none;
+
+  background-color: $main-color;
+  border-radius: 10px;
+}
+
+.product-header__in-basket:hover,
+.product-header__in-basket:focus {
+  background-color: lighten($color: $main-color, $amount: 30%);
+}
+
+.product-header__in-basket:active {
+  background-color: lighten($color: $main-color, $amount: 20%);
+}
+
+.product-header__buy {
+  padding: 0;
+
+  font-size: 12px;
+
+  background-color: transparent;
+  border: none;
+}
+
+.product-header__icon {
+  margin-right: 10px;
+
+  vertical-align: middle;
+}
+
+.product-header__buy:hover,
+.product-header__buy:focus,
+.product-header__buy:hover path,
+.product-header__buy:focus path {
+  color: lighten($color: $main-color, $amount: 30%);
+
+  stroke: lighten($color: $main-color, $amount: 30%);
+}
+
+.product-header__buy:active,
+.product-header__buy:active path {
+  color: lighten($color: $main-color, $amount: 20%);
+
+  stroke: lighten($color: $main-color, $amount: 20%);
+}
+
+.product-header__close {
+  position: absolute;
+  top: 11px;
+  right: 37px;
+
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+}
+
+.product-header__close:hover rect,
+.product-header__close:focus rect {
+  fill: lighten($color: #000000, $amount: 30%);
+}
+
+.product-header__close:active rect {
+  fill: lighten($color: #000000, $amount: 20%);
+}

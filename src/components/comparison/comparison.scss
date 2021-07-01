@@ -1,0 +1,92 @@
+.comparison {
+  background-color: $bg-color-main;
+}
+
+.comparison__container {
+  padding-top: 18px;
+  padding-bottom: 60px;
+
+  background-color: white;
+  border-radius: 10px;
+
+@extend .container;
+}
+
+.comparison__title {
+  display: inline-block;
+  margin-bottom: 22px;
+
+@extend .title-little;
+}
+
+.comparison__filter {
+  @extend .cell--title;
+}
+
+.comparison__select {
+  width: 250px;
+  height: 50px;
+  margin-bottom: 28px;
+  padding: 16px 15px;
+
+  font-size: 14px;
+  color: $color-text-halfhidden;
+
+  border: 1px solid $border;
+  border-radius: 10px;
+  box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.comparison__btn {
+  position: relative;
+
+  display: block;
+  padding-left: 35px;
+
+  background-color: transparent;
+  border: none;
+}
+
+.comparison__btn:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.comparison__btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+
+  border: 1.6px solid $check;
+  border-radius: 50%;
+}
+
+.comparison__btn--checked::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 4.4px;
+
+  display: inline-block;
+  width: 11.5px;
+  height: 11.5px;
+
+  background-color: $check;
+  border-radius: 50%;
+}
+
+.comparison__header {
+  display: flex;
+  width: 100%;
+  margin-bottom: 41px;
+  padding-bottom: 37px;
+
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.comparison__products-headers {
+  display: flex;
+}

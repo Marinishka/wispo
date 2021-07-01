@@ -1,0 +1,145 @@
+body {
+  position: relative;
+
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
+  line-height: 1.3em;
+  font-family: "Montserrat-Medium", "Arial", sans-serif;
+  text-decoration: none;
+}
+
+html {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.overflow--hidden {
+  overflow: hidden;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+
+  clip: rect(0 0 0 0);
+}
+
+.container {
+  width: 100%;
+  min-width: 1520px;
+  max-width: 1520px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.cell--title {
+  width: 268px;
+  margin-right: 80px;
+}
+
+.cell--content {
+  width: 448px;
+}
+
+.cell--content:not(:last-child) {
+  margin-right: 140px;
+}
+
+.title-little {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.prompt__btn {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+
+  text-align: center;
+
+  background-color: $bg-color-main;
+  background-image: url("./../img/icons/prompt.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.prompt {
+  position: relative;
+
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+
+  vertical-align: middle;
+  text-align: center;
+  color: $color-text-halfhidden;
+
+  background-color: $bg-color-main;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.prompt__text {
+  position: absolute;
+  bottom: 42px;
+  left: calc(50% - 129px);
+
+  width: 258px;
+  padding: 20px;
+
+  font-size: 16px;
+  font-family: "Montserrat-Regular", "Arial", sans-serif;
+  text-align: left;
+  color: $main-color;
+
+  background-color: white;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+  visibility: hidden;
+}
+
+.prompt__text::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: calc(50% - 35px / 2);
+
+  display: block;
+  width: 35px;
+  height: 10px;
+
+  background-image: url("./../img/pointer.png");
+}
+
+.prompt:hover .prompt__text {
+  visibility: visible;
+}
+
+.prompt__highlighter {
+  font-family: "Montserrat-Bold", "Arial", sans-serif;
+}
