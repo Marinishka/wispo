@@ -13,7 +13,10 @@ const Comparison = ({data}) => {
   };
 
   const onFilterBtnsClick = (evt) => {
-    setFilterProducts(evt.target.dataset.filter);
+    if (evt.target.dataset.filter) {
+      setFilterProducts(evt.target.dataset.filter);
+    }
+    return;
   };
 
   return <div className="comparison">
