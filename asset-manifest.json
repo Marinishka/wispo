@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/wispo/static/css/main.8a8f29d8.chunk.css",
-    "main.js": "/wispo/static/js/main.cd1392fa.chunk.js",
-    "main.js.map": "/wispo/static/js/main.cd1392fa.chunk.js.map",
+    "main.css": "/wispo/static/css/main.31c7539d.chunk.css",
+    "main.js": "/wispo/static/js/main.0b027458.chunk.js",
+    "main.js.map": "/wispo/static/js/main.0b027458.chunk.js.map",
     "runtime-main.js": "/wispo/static/js/runtime-main.2b29407c.js",
     "runtime-main.js.map": "/wispo/static/js/runtime-main.2b29407c.js.map",
     "static/js/2.062fa00a.chunk.js": "/wispo/static/js/2.062fa00a.chunk.js",
     "static/js/2.062fa00a.chunk.js.map": "/wispo/static/js/2.062fa00a.chunk.js.map",
     "index.html": "/wispo/index.html",
-    "static/css/main.8a8f29d8.chunk.css.map": "/wispo/static/css/main.8a8f29d8.chunk.css.map",
+    "static/css/main.31c7539d.chunk.css.map": "/wispo/static/css/main.31c7539d.chunk.css.map",
     "static/js/2.062fa00a.chunk.js.LICENSE.txt": "/wispo/static/js/2.062fa00a.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/wispo/static/media/prompt.2fe6828d.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.2b29407c.js",
     "static/js/2.062fa00a.chunk.js",
-    "static/css/main.8a8f29d8.chunk.css",
-    "static/js/main.cd1392fa.chunk.js"
+    "static/css/main.31c7539d.chunk.css",
+    "static/js/main.0b027458.chunk.js"
   ]
 }
